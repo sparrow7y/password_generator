@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        
+        <div class="options">
+            <label><input type="checkbox" id="lowercase" checked> Minuscules</label>
+            <label><input type="checkbox" id="uppercase" checked> Majuscules</label>
+            <label><input type="checkbox" id="numbers" checked> Chiffres</label>
+            <label><input type="checkbox" id="symbols" checked> Symboles</label>
+            <label><input type="checkbox" id="repetition"> Exclure répétition</label>
+            <label><input type="checkbox" id="espaces"> Inclure espaces</label>
+        </div>
+
+        <div class="mdp-length">
+            <label for="password-length">Longueur: <span>12</span></label>
+            <input type="range" id="password-length" min="4" max="21" value="12">
+        </div>
+
+        <button btn-generate>Générer</button>
+
+        <div class="mdp-groupe">
+            <input type="text" readonly placeholder="Votre mot de passe apparaîtra ici">
+        </div>
+
+        <div class="indicator-container">
+            <div class="indicator" id="petit"></div>
+            <div class="indicator" id="moyen"></div>
+            <div class="indicator" id="long"></div>
+        </div>
+
+        <button class="copy">
+            <ion-icon name="copy-outline"></ion-icon> Copier
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
